@@ -1,0 +1,10 @@
+C:\Users\salas\source\repos\CapadeDatos\bin\Debug\CapadeDatos.dll
+C:\Users\salas\source\repos\CapadeDatos\bin\Debug\CapadeDatos.pdb
+C:\Users\salas\source\repos\CapadeDatos\bin\Debug\CapaEntidad.dll
+C:\Users\salas\source\repos\CapadeDatos\bin\Debug\CapaEntidad.pdb
+C:\Users\salas\source\repos\CapadeDatos\bin\Debug\CapaEntidad.dll.config
+C:\Users\salas\source\repos\CapadeDatos\obj\Debug\CapadeDatos.csproj.AssemblyReference.cache
+C:\Users\salas\source\repos\CapadeDatos\obj\Debug\CapadeDatos.csproj.CoreCompileInputs.cache
+C:\Users\salas\source\repos\CapadeDatos\obj\Debug\CapadeDa.D76ECDB7.Up2Date
+C:\Users\salas\source\repos\CapadeDatos\obj\Debug\CapadeDatos.dll
+C:\Users\salas\source\repos\CapadeDatos\obj\Debug\CapadeDatos.pdb

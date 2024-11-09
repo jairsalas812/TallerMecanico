@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tallerDbModelStoreContainer" CdmEntityContainer="tallerDbEntities">
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="tallerDbModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="nombre_cl" ColumnName="nombre_cl" />
+          <ScalarProperty Name="rfc_cl" ColumnName="rfc_cl" />
+          <ScalarProperty Name="telefono_cliente" ColumnName="telefono_cliente" />
+          <ScalarProperty Name="correo_cliente" ColumnName="correo_cliente" />
+          <ScalarProperty Name="direccion_cliente" ColumnName="direccion_cliente" />
+          <ScalarProperty Name="modelo_cliente" ColumnName="modelo_cliente" />
+          <ScalarProperty Name="placas_cliente" ColumnName="placas_cliente" />
+          <ScalarProperty Name="ano_cl" ColumnName="ano_cl" />
+          <ScalarProperty Name="cp_cl" ColumnName="cp_cl" />
+          <ScalarProperty Name="color_cl" ColumnName="color_cl" />
+          <ScalarProperty Name="numeroserie_cl" ColumnName="numeroserie_cl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cotizaciones">
+      <EntityTypeMapping TypeName="tallerDbModel.Cotizaciones">
+        <MappingFragment StoreEntitySet="Cotizaciones">
+          <ScalarProperty Name="id_cotizacion" ColumnName="id_cotizacion" />
+          <ScalarProperty Name="id_servicio" ColumnName="id_servicio" />
+          <ScalarProperty Name="fecha_cotizacion" ColumnName="fecha_cotizacion" />
+          <ScalarProperty Name="id_empleado" ColumnName="id_empleado" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="estado_cotizacion" ColumnName="estado_cotizacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empleado">
+      <EntityTypeMapping TypeName="tallerDbModel.Empleado">
+        <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="id_empleado" ColumnName="id_empleado" />
+          <ScalarProperty Name="nombre_em" ColumnName="nombre_em" />
+          <ScalarProperty Name="especialidad_em" ColumnName="especialidad_em" />
+          <ScalarProperty Name="telefono_em" ColumnName="telefono_em" />
+          <ScalarProperty Name="id_orden" ColumnName="id_orden" />
+          <ScalarProperty Name="fechaCreacion_em" ColumnName="fechaCreacion_em" />
+          <ScalarProperty Name="direccion_em" ColumnName="direccion_em" />
+          <ScalarProperty Name="rfc_em" ColumnName="rfc_em" />
+          <ScalarProperty Name="curp_em" ColumnName="curp_em" />
+          <ScalarProperty Name="nss_em" ColumnName="nss_em" />
+          <ScalarProperty Name="fechaNacimiento_em" ColumnName="fechaNacimiento_em" />
+          <ScalarProperty Name="salario_em" ColumnName="salario_em" />
+          <ScalarProperty Name="estadoCivil_em" ColumnName="estadoCivil_em" />
+          <ScalarProperty Name="cp_em" ColumnName="cp_em" />
+          <ScalarProperty Name="iidusuario" ColumnName="iidusuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permiso">
+      <EntityTypeMapping TypeName="tallerDbModel.Permiso">
+        <MappingFragment StoreEntitySet="Permiso">
+          <ScalarProperty Name="id_permiso" ColumnName="id_permiso" />
+          <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+          <ScalarProperty Name="NombreMenu" ColumnName="NombreMenu" />
+          <ScalarProperty Name="fechaCreacion" ColumnName="fechaCreacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Piezas">
+      <EntityTypeMapping TypeName="tallerDbModel.Piezas">
+        <MappingFragment StoreEntitySet="Piezas">
+          <ScalarProperty Name="id_pieza" ColumnName="id_pieza" />
+          <ScalarProperty Name="sku_pieza" ColumnName="sku_pieza" />
+          <ScalarProperty Name="nombre_pieza" ColumnName="nombre_pieza" />
+          <ScalarProperty Name="descripcion_pieza" ColumnName="descripcion_pieza" />
+          <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
+          <ScalarProperty Name="id_provedor" ColumnName="id_provedor" />
+          <ScalarProperty Name="id_ubicacion" ColumnName="id_ubicacion" />
+          <ScalarProperty Name="id_servicio" ColumnName="id_servicio" />
+          <ScalarProperty Name="fechaCreacion_pi" ColumnName="fechaCreacion_pi" />
+          <ScalarProperty Name="fechaModificacion_pi" ColumnName="fechaModificacion_pi" />
+          <ScalarProperty Name="costo_pieza" ColumnName="costo_pieza" />
+          <ScalarProperty Name="cantidad_pieza" ColumnName="cantidad_pieza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rol">
+      <EntityTypeMapping TypeName="tallerDbModel.Rol">
+        <MappingFragment StoreEntitySet="Rol">
+          <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servicios">
+      <EntityTypeMapping TypeName="tallerDbModel.Servicios">
+        <MappingFragment StoreEntitySet="Servicios">
+          <ScalarProperty Name="id_servicio" ColumnName="id_servicio" />
+          <ScalarProperty Name="Estado_orden" ColumnName="Estado_orden" />
+          <ScalarProperty Name="nombre_servicio" ColumnName="nombre_servicio" />
+          <ScalarProperty Name="costo_servicio" ColumnName="costo_servicio" />
+          <ScalarProperty Name="duracion_servicio" ColumnName="duracion_servicio" />
+          <ScalarProperty Name="fechaCreacion_se" ColumnName="fechaCreacion_se" />
+          <ScalarProperty Name="fechaModificacion_se" ColumnName="fechaModificacion_se" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="tallerDbModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="tallerDbModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+          <ScalarProperty Name="Nombre_us" ColumnName="Nombre_us" />
+          <ScalarProperty Name="correo_us" ColumnName="correo_us" />
+          <ScalarProperty Name="clave_us" ColumnName="clave_us" />
+          <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="FechaCreacion_us" ColumnName="FechaCreacion_us" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

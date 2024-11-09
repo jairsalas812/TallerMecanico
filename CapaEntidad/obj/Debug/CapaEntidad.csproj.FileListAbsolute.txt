@@ -1,0 +1,12 @@
+C:\Users\salas\source\repos\CapaEntidad\bin\Debug\CapaEntidad.dll.config
+C:\Users\salas\source\repos\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\salas\source\repos\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\salas\source\repos\CapaEntidad\bin\Debug\EntityFramework.dll
+C:\Users\salas\source\repos\CapaEntidad\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\salas\source\repos\CapaEntidad\bin\Debug\EntityFramework.xml
+C:\Users\salas\source\repos\CapaEntidad\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\salas\source\repos\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\salas\source\repos\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\salas\source\repos\CapaEntidad\obj\Debug\CapaEnti.526B9C87.Up2Date
+C:\Users\salas\source\repos\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\salas\source\repos\CapaEntidad\obj\Debug\CapaEntidad.pdb

@@ -1,0 +1,12 @@
+C:\Users\salas\source\repos\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\salas\source\repos\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\salas\source\repos\CapaNegocio\bin\Debug\CapadeDatos.dll
+C:\Users\salas\source\repos\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\salas\source\repos\CapaNegocio\bin\Debug\CapadeDatos.pdb
+C:\Users\salas\source\repos\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\salas\source\repos\CapaNegocio\bin\Debug\CapaEntidad.dll.config
+C:\Users\salas\source\repos\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\salas\source\repos\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\salas\source\repos\CapaNegocio\obj\Debug\CapaNego.81B9D119.Up2Date
+C:\Users\salas\source\repos\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\salas\source\repos\CapaNegocio\obj\Debug\CapaNegocio.pdb

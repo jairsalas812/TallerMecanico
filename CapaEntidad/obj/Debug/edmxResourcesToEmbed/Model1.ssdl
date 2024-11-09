@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tallerDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_cl" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rfc_cl" Type="nvarchar" MaxLength="50" />
+    <Property Name="telefono_cliente" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="correo_cliente" Type="nvarchar" MaxLength="100" />
+    <Property Name="direccion_cliente" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="modelo_cliente" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="placas_cliente" Type="datetime" Nullable="false" />
+    <Property Name="ano_cl" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="cp_cl" Type="nvarchar" MaxLength="10" />
+    <Property Name="color_cl" Type="nvarchar" MaxLength="40" />
+    <Property Name="numeroserie_cl" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="Cotizaciones">
+    <Key>
+      <PropertyRef Name="id_cotizacion" />
+    </Key>
+    <Property Name="id_cotizacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_servicio" Type="int" Nullable="false" />
+    <Property Name="fecha_cotizacion" Type="datetime" Nullable="false" />
+    <Property Name="id_empleado" Type="int" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+    <Property Name="estado_cotizacion" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="id_empleado" />
+    </Key>
+    <Property Name="id_empleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_em" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="especialidad_em" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="telefono_em" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_orden" Type="int" Nullable="false" />
+    <Property Name="fechaCreacion_em" Type="datetime" Nullable="false" />
+    <Property Name="direccion_em" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="rfc_em" Type="nvarchar" MaxLength="13" />
+    <Property Name="curp_em" Type="nvarchar" MaxLength="18" />
+    <Property Name="nss_em" Type="nchar" MaxLength="10" />
+    <Property Name="fechaNacimiento_em" Type="nchar" MaxLength="10" />
+    <Property Name="salario_em" Type="nchar" MaxLength="10" />
+    <Property Name="estadoCivil_em" Type="nchar" MaxLength="10" />
+    <Property Name="cp_em" Type="nchar" MaxLength="10" />
+    <Property Name="iidusuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Permiso">
+    <Key>
+      <PropertyRef Name="id_permiso" />
+    </Key>
+    <Property Name="id_permiso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_rol" Type="int" />
+    <Property Name="NombreMenu" Type="varchar" MaxLength="50" />
+    <Property Name="fechaCreacion" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Piezas">
+    <Key>
+      <PropertyRef Name="id_pieza" />
+    </Key>
+    <Property Name="id_pieza" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sku_pieza" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nombre_pieza" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="descripcion_pieza" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="id_categoria" Type="int" Nullable="false" />
+    <Property Name="id_provedor" Type="int" Nullable="false" />
+    <Property Name="id_ubicacion" Type="int" Nullable="false" />
+    <Property Name="id_servicio" Type="int" Nullable="false" />
+    <Property Name="fechaCreacion_pi" Type="datetime" Nullable="false" />
+    <Property Name="fechaModificacion_pi" Type="datetime" Nullable="false" />
+    <Property Name="costo_pieza" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="cantidad_pieza" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="id_rol" />
+    </Key>
+    <Property Name="id_rol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="FechaCreacion" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Servicios">
+    <Key>
+      <PropertyRef Name="id_servicio" />
+    </Key>
+    <Property Name="id_servicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Estado_orden" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nombre_servicio" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="costo_servicio" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="duracion_servicio" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="fechaCreacion_se" Type="datetime" Nullable="false" />
+    <Property Name="fechaModificacion_se" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Documento" Type="varchar" MaxLength="50" />
+    <Property Name="Nombre_us" Type="varchar" MaxLength="50" />
+    <Property Name="correo_us" Type="varchar" MaxLength="50" />
+    <Property Name="clave_us" Type="varchar" MaxLength="50" />
+    <Property Name="id_rol" Type="int" />
+    <Property Name="estado" Type="bit" />
+    <Property Name="FechaCreacion_us" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__Permiso__id_rol__114A936A">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="0..1" />
+    <End Role="Permiso" Type="Self.Permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="id_rol" />
+      </Principal>
+      <Dependent Role="Permiso">
+        <PropertyRef Name="id_rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__id_rol__19DFD96B">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="id_rol" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="id_rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cotizaciones_Cliente1">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Cotizaciones" Type="Self.Cotizaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="Cotizaciones">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cotizaciones_Empleado">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="Cotizaciones" Type="Self.Cotizaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="id_empleado" />
+      </Principal>
+      <Dependent Role="Cotizaciones">
+        <PropertyRef Name="id_empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cotizaciones_Servicios">
+    <End Role="Servicios" Type="Self.Servicios" Multiplicity="1" />
+    <End Role="Cotizaciones" Type="Self.Cotizaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicios">
+        <PropertyRef Name="id_servicio" />
+      </Principal>
+      <Dependent Role="Cotizaciones">
+        <PropertyRef Name="id_servicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empleado_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="iidusuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Piezas_Servicios">
+    <End Role="Servicios" Type="Self.Servicios" Multiplicity="1" />
+    <End Role="Piezas" Type="Self.Piezas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicios">
+        <PropertyRef Name="id_servicio" />
+      </Principal>
+      <Dependent Role="Piezas">
+        <PropertyRef Name="id_servicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="tallerDbModelStoreContainer">
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cotizaciones" EntityType="Self.Cotizaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Permiso" EntityType="Self.Permiso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Piezas" EntityType="Self.Piezas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Servicios" EntityType="Self.Servicios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Permiso__id_rol__114A936A" Association="Self.FK__Permiso__id_rol__114A936A">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Permiso" EntitySet="Permiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__id_rol__19DFD96B" Association="Self.FK__Usuario__id_rol__19DFD96B">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cotizaciones_Cliente1" Association="Self.FK_Cotizaciones_Cliente1">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Cotizaciones" EntitySet="Cotizaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cotizaciones_Empleado" Association="Self.FK_Cotizaciones_Empleado">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="Cotizaciones" EntitySet="Cotizaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cotizaciones_Servicios" Association="Self.FK_Cotizaciones_Servicios">
+      <End Role="Servicios" EntitySet="Servicios" />
+      <End Role="Cotizaciones" EntitySet="Cotizaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empleado_Usuario" Association="Self.FK_Empleado_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Piezas_Servicios" Association="Self.FK_Piezas_Servicios">
+      <End Role="Servicios" EntitySet="Servicios" />
+      <End Role="Piezas" EntitySet="Piezas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
